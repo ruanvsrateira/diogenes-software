@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet"></head>
+<body>
+ 
+  <div class="img"> <img src="https://yata-apix-7cca9a07-73ec-4278-935b-a3c292e81061.lss.locawebcorp.com.br/942d13d441c745d0b900b2b54ce10875.png" alt="Logo do Diogenes"></div>
+
+
+  <h1>Diogenes Puente</h1>
+
+    <div class="inputContainer">
+      <input type="text" class="nome" placeholder="Digite o nome" />
+      <br />
+      <input type="text" class="nascimento" placeholder="Digite o seu ano de nascimento" />
+    <button class="btnVerificar"
+      onclick="verificarIdade()"
+    >Verificar</button>
+    </div>
+
+    <h5></h5>
+
+    <script>
+
+      const verificarIdade = () => {
+        const inputNome = document.querySelector(".nome").value;
+        const inputNascimento = document.querySelector(".nascimento").value;
+        const msg = document.querySelector('h5');
+        const anoAtual = 2022;
+
+        const idade = anoAtual - inputNascimento;
+
+        if(idade >= 18) {
+          msg.innerText = `${inputNome} você pode comprar !!`
+          msg.setAttribute("class", "p")
+
+        } else {
+          msg.innerText = `${inputNome} você não pode comprar charuto`
+          msg.setAttribute("class", "np")
+        }
+        
+      }
+
+    </script>
+
+    
+</body>
+</html>
