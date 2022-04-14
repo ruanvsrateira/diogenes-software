@@ -34,7 +34,7 @@
         const inputNome = document.querySelector(".nome").value;
         const inputNascimento = document.querySelector(".nascimento").value;
         const msg = document.querySelector('h5');
-        const anoAtual = 2022;
+        const anoAtual = new Date().getFullYear();
 
         const idade = anoAtual - inputNascimento;
 
@@ -48,7 +48,6 @@
         }
         
       }
-
     </script>
 
     
